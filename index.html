@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Small World Nursery · Watford</title>
+  <meta name="description" content="Small World Nursery in Watford — a warm, colourful nursery for babies, toddlers and pre-schoolers from 3 months to 5 years. Ofsted Good. Open 7:30am–6pm, 51 weeks a year. Funded places available." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#FFF8EC" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+  <!-- Shared shapes, drawn once and reused with <use>. -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <!-- A single handprint, echoing the three hands in the logo. Coloured via currentColor. -->
+    <symbol id="hand" viewBox="0 0 40 48">
+      <g fill="currentColor">
+        <rect x="7.5" y="5" width="6" height="18" rx="3" transform="rotate(-12 10.5 14)" />
+        <rect x="15" y="1" width="6.2" height="20" rx="3.1" />
+        <rect x="22.6" y="2.4" width="6" height="19" rx="3" transform="rotate(7 25.6 12)" />
+        <rect x="29.4" y="8.4" width="5.4" height="15" rx="2.7" transform="rotate(18 32 16)" />
+        <rect x="-0.6" y="22" width="6" height="16" rx="3" transform="rotate(-48 2.4 30)" />
+        <path d="M6.6 20.5c2-3.4 25.2-3.8 27.4.4 1.6 11.4-2.2 23.8-13.6 24.6C9.4 46.2 4.8 34.4 6.6 20.5z" />
+      </g>
+    </symbol>
+    <symbol id="scribble" viewBox="0 0 220 24" preserveAspectRatio="none">
+      <path fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" d="M5 16c44-9 96-12 150-9 22 1 42 3 60 6" />
+    </symbol>
+    <symbol id="wave" viewBox="0 0 1440 70" preserveAspectRatio="none">
+      <path fill="currentColor" d="M0 70V38C160 10 320 0 500 14s320 48 500 44c170-4 300-34 440-40V70z" />
+    </symbol>
+    <symbol id="arrow" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6" />
+    </symbol>
+    <symbol id="check" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7" />
+    </symbol>
+    <symbol id="quote" viewBox="0 0 48 40">
+      <path fill="currentColor" d="M0 40V24C0 10 7 2 20 0l2 6C14 8 11 13 11 20h9v20zm26 0V24C26 10 33 2 46 0l2 6c-8 2-11 7-11 14h9v20z" />
+    </symbol>
+
+    <!-- Line icons -->
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z" />
+    </symbol>
+    <symbol id="i-age" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="7" r="3.2" />
+        <path d="M6 20.5c0-3.6 2.7-6.5 6-6.5s6 2.9 6 6.5" />
+      </g>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="8.5" />
+        <path d="M12 7.5V12l3 2" />
+      </g>
+    </symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="9" width="16" height="11" rx="2" />
+        <path d="M3 9h18M12 9v11M12 9c-1.5-3.5-5.5-4-5.5-1.5S10 9 12 9zm0 0c1.5-3.5 5.5-4 5.5-1.5S14 9 12 9z" />
+      </g>
+    </symbol>
+    <symbol id="i-bowl" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3.5 11h17a8.5 8.5 0 0 1-17 0zM9 19.3V21h6v-1.7" />
+        <path d="M9 7.5c0-1.2 1-1.4 1-2.6M12.5 7.5c0-1.2 1-1.4 1-2.6" />
+      </g>
+    </symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 19c0-8 5-14 15-14 0 10-6 15-13 15" />
+        <path d="M5 19l8-8" />
+      </g>
+    </symbol>
+    <symbol id="i-aid" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3.5" y="6.5" width="17" height="13" rx="2.5" />
+        <path d="M9 6.5V5a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 5v1.5M12 10v6M9 13h6" />
+      </g>
+    </symbol>
+    <symbol id="i-tree" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 21v-6M8 15h8a4 4 0 0 0 .6-7.9A4.8 4.8 0 0 0 7.5 7 4 4 0 0 0 8 15z" />
+        <path d="M4 21h16" />
+      </g>
+    </symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20v-8M12 12c0-4-3-6-7-6 0 4 3 6 7 6zM12 14c0-4 3-6.5 7-6.5 0 4-3 6.5-7 6.5z" />
+        <path d="M6 20h12" />
+      </g>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="6.5" y="2.5" width="11" height="19" rx="2.5" />
+        <path d="M10.5 18.5h3" />
+      </g>
+    </symbol>
+    <symbol id="i-call" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M5 4h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.1 6.1l1.4-2.3L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z" />
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="5.5" width="18" height="13" rx="2.5" />
+        <path d="M4 7l8 6 8-6" />
+      </g>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 21s-6.5-5.8-6.5-11a6.5 6.5 0 0 1 13 0c0 5.2-6.5 11-6.5 11z" />
+        <circle cx="12" cy="10" r="2.4" />
+      </g>
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 7.5 2.8C19.5 15.4 12 20 12 20z" />
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z" />
+        <path d="M9 12l2.2 2.2L15.5 10" />
+      </g>
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4A1.5 1.5 0 0 1 4 14.5z" />
+        <path d="M8.5 9.5h7M8.5 12.5h4.5" />
+      </g>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Small World Nursery — home">
+        <img src="assets/logo.png" alt="Small World Nursery" width="560" height="288" />
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="#top" aria-current="page">Home</a></li>
+          <li><a href="#why">Our Nursery</a></li>
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#play">Learning &amp; Play</a></li>
+          <li><a href="#funding">Fees &amp; Funding</a></li>
+          <li><a href="#parents">Parents</a></li>
+          <li><a href="#visit">Contact</a></li>
+        </ul>
+        <div class="nav-mobile-extras">
+          <a class="btn btn-primary" href="#visit">Arrange a Visit</a>
+          <a class="nav-phone" href="tel:01923230300"><svg class="icon"><use href="#i-call" /></svg>01923 230300</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-phone" href="tel:01923230300"><svg class="icon"><use href="#i-call" /></svg><span>01923 230300</span></a>
+        <a class="btn btn-primary btn-sm" href="#visit">Arrange a Visit</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-menu-toggle>
+          <span class="menu-toggle-bars" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <svg class="hero-hand hero-hand-pink" aria-hidden="true"><use href="#hand" /></svg>
+      <svg class="hero-hand hero-hand-blue" aria-hidden="true"><use href="#hand" /></svg>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="pill pill-green">Nursery &amp; pre-school in Watford</p>
+          <h1 class="hero-title">
+            Where education, care &amp; play go
+            <span class="scribbled">hand in hand<svg aria-hidden="true"><use href="#scribble" /></svg></span>
+          </h1>
+          <p class="hero-lead">A happy, colourful home-from-home for babies, toddlers and pre-schoolers — with gardens for every age, food cooked fresh each day and a team who know every child by name.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary btn-lg" href="#visit">Arrange a Visit <svg class="icon"><use href="#arrow" /></svg></a>
+            <a class="btn btn-ghost btn-lg" href="#rooms">Explore Our Rooms</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-photo blob">
+            <img src="assets/images/hero-parachute.jpg" alt="Children running and laughing under a rainbow play parachute in the nursery garden" width="1800" height="1196" fetchpriority="high" />
+          </div>
+          <div class="hero-baby" aria-hidden="true">
+            <img src="assets/images/baby-smile.jpg" alt="" width="700" height="465" />
+          </div>
+          <a class="sticker sticker-ofsted" href="#parents">
+            <img src="assets/images/ofsted-good.jpg" alt="Ofsted Good Provider" width="240" height="240" />
+          </a>
+          <p class="sticker sticker-note">Funded places<br />from 9 months!</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="facts" aria-label="Nursery at a glance">
+          <li class="fact">
+            <span class="fact-icon tone-blue"><svg class="icon"><use href="#i-star" /></svg></span>
+            <span><strong>Rated ‘Good’</strong> by Ofsted</span>
+          </li>
+          <li class="fact">
+            <span class="fact-icon tone-pink"><svg class="icon"><use href="#i-age" /></svg></span>
+            <span><strong>3 months – 5 years</strong> babies to pre-school</span>
+          </li>
+          <li class="fact">
+            <span class="fact-icon tone-orange"><svg class="icon"><use href="#i-clock" /></svg></span>
+            <span><strong>7:30am – 6pm</strong> Mon–Fri, 51 weeks a year</span>
+          </li>
+          <li class="fact">
+            <span class="fact-icon tone-green"><svg class="icon"><use href="#i-gift" /></svg></span>
+            <span><strong>Funded places</strong> for 9 months to 4 years</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Why Small World -->
+    <section class="section" id="why">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Why Small World?</p>
+          <h2>Everything you’d want for your little one, all under one roof</h2>
+        </header>
+
+        <ul class="reasons">
+          <li class="reason">
+            <span class="reason-icon tone-orange"><svg class="icon"><use href="#i-bowl" /></svg></span>
+            <h3>Healthy meals, freshly made</h3>
+            <p>Breakfast, lunch, tea and snacks cooked here every day.</p>
+          </li>
+          <li class="reason">
+            <span class="reason-icon tone-green"><svg class="icon"><use href="#i-leaf" /></svg></span>
+            <h3>Every diet &amp; allergy catered for</h3>
+            <p>All dietary requirements and allergies looked after.</p>
+          </li>
+          <li class="reason">
+            <span class="reason-icon tone-pink"><svg class="icon"><use href="#i-aid" /></svg></span>
+            <h3>Paediatric first aid trained</h3>
+            <p>A caring team trained to keep little ones safe.</p>
+          </li>
+          <li class="reason">
+            <span class="reason-icon tone-blue"><svg class="icon"><use href="#i-tree" /></svg></span>
+            <h3>A garden for every age group</h3>
+            <p>Each room has its own outdoor space to explore.</p>
+          </li>
+          <li class="reason">
+            <span class="reason-icon tone-sun"><svg class="icon"><use href="#i-sprout" /></svg></span>
+            <h3>Allotments &amp; mud kitchens</h3>
+            <p>Planting, growing and plenty of muddy pies.</p>
+          </li>
+          <li class="reason">
+            <span class="reason-icon tone-purple"><svg class="icon"><use href="#i-phone" /></svg></span>
+            <h3>Live updates on Famly</h3>
+            <p>Photos, meals, naps and learning — straight to your phone.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Rooms -->
+    <section class="section section-tint" id="rooms">
+      <svg class="wave wave-top" aria-hidden="true"><use href="#wave" /></svg>
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">A place to grow</p>
+          <h2>A room for every stage, from first cuddles to ‘big school’</h2>
+          <p>Children move up through four rooms as they grow — each with its own team, routine and garden.</p>
+        </header>
+
+        <!-- Age ribbon: lets a parent find their child's room at a glance. -->
+        <ol class="age-ribbon" aria-label="Rooms by age">
+          <li class="age-step room-baby"><a href="#room-baby"><span>Baby Room</span><small>3–15 mths</small></a></li>
+          <li class="age-step room-toddler"><a href="#room-toddler"><span>Toddler Room</span><small>15 mths–2 yrs</small></a></li>
+          <li class="age-step room-twos"><a href="#room-twos"><span>2–3’s Room</span><small>2–3 yrs</small></a></li>
+          <li class="age-step room-preschool"><a href="#room-preschool"><span>Pre-School</span><small>3–5 yrs</small></a></li>
+        </ol>
+
+        <div class="rooms reveal">
+          <article class="room-card room-baby" id="room-baby">
+            <div class="room-photo">
+              <img src="assets/images/room-baby.jpg" alt="A baby sitting among colourful sensory fabrics in the Baby Room" width="1000" height="664" loading="lazy" />
+              <span class="room-age">3 – 15 months</span>
+            </div>
+            <div class="room-body">
+              <h3>Baby Room</h3>
+              <p>A calm, cosy room that feels just like home, with a separate sleep room, routines built around your baby and their own garden.</p>
+              <a class="text-link" href="#room-baby">Visit the Baby Room <svg class="icon"><use href="#arrow" /></svg></a>
+            </div>
+          </article>
+
+          <article class="room-card room-toddler" id="room-toddler">
+            <div class="room-photo">
+              <img src="assets/images/room-toddler.jpg" alt="A delighted toddler playing with spades in the sandpit" width="1000" height="664" loading="lazy" />
+              <span class="room-age">15 months – 2 years</span>
+            </div>
+            <div class="room-body">
+              <h3>Toddler Room</h3>
+              <p>Bright and spacious, with its own private garden. Songs, stories and first friendships help toddlers grow in confidence.</p>
+              <a class="text-link" href="#room-toddler">Visit the Toddler Room <svg class="icon"><use href="#arrow" /></svg></a>
+            </div>
+          </article>
+
+          <article class="room-card room-twos" id="room-twos">
+            <div class="room-photo">
+              <img src="assets/images/room-twos.jpg" alt="A little girl building a tall tower from colourful construction pieces" width="1000" height="664" loading="lazy" />
+              <span class="room-age">2 – 3 years</span>
+            </div>
+            <div class="room-body">
+              <h3>2–3’s Room</h3>
+              <p>For curious minds and busy little hands: messy play, make-believe and gentle support with toilet training, rain or shine.</p>
+              <a class="text-link" href="#room-twos">Visit the 2–3’s Room <svg class="icon"><use href="#arrow" /></svg></a>
+            </div>
+          </article>
+
+          <article class="room-card room-preschool" id="room-preschool">
+            <div class="room-photo">
+              <img src="assets/images/room-preschool.jpg" alt="A pre-school boy counting beads on a wooden abacus" width="1000" height="664" loading="lazy" />
+              <span class="room-age">3 – 5 years</span>
+            </div>
+            <div class="room-body">
+              <h3>Pre-School</h3>
+              <p>Our biggest room, with role play, maths and creative zones, termly topics and their own outdoor area. Ready for big school.</p>
+              <a class="text-link" href="#room-preschool">Visit the Pre-School <svg class="icon"><use href="#arrow" /></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+      <svg class="wave wave-bottom" aria-hidden="true"><use href="#wave" /></svg>
+    </section>
+
+    <!-- Learning through play -->
+    <section class="section" id="play">
+      <div class="container play-grid">
+        <div class="play-intro">
+          <p class="eyebrow">Learning through play</p>
+          <h2>Little hands can do <span class="hl hl-sun">big things</span></h2>
+          <p>Every day is full of muddy adventures, messy play, stories and songs — carefully planned to help each child grow at their own pace.</p>
+          <ul class="chips" aria-label="Some of the things children do">
+            <li class="chip">Mud kitchens</li>
+            <li class="chip">Planting &amp; growing</li>
+            <li class="chip">Messy play</li>
+            <li class="chip">Role play</li>
+            <li class="chip">Stories &amp; songs</li>
+            <li class="chip">Mark making</li>
+            <li class="chip">Early maths</li>
+            <li class="chip">Construction</li>
+          </ul>
+          <p class="small-print">Following the EYFS with Birth to 5 Matters and Development Matters.</p>
+          <a class="btn btn-ghost" href="#play">How children learn here</a>
+        </div>
+
+        <div class="bento reveal">
+          <figure class="tile tile-allotment">
+            <img src="assets/images/play-allotment.jpg" alt="A child holding a seedling in soil, ready to plant" width="800" height="500" loading="lazy" />
+            <figcaption><span class="tag tone-green">Allotment</span>Growing our own in the nursery allotments</figcaption>
+          </figure>
+          <figure class="tile tile-snail">
+            <img src="assets/images/play-snail.jpg" alt="A smiling girl holding a giant snail on a slice of cucumber" width="1000" height="664" loading="lazy" />
+            <figcaption><span class="tag tone-orange">Nature</span>Curious about everything</figcaption>
+          </figure>
+          <figure class="tile tile-outdoors">
+            <img src="assets/images/play-outdoors.jpg" alt="A toddler playing outdoors in the nursery garden" width="420" height="420" loading="lazy" />
+            <figcaption><span class="tag tone-blue">Outdoors</span>Garden play, rain or shine</figcaption>
+          </figure>
+          <figure class="tile tile-shapes">
+            <img src="assets/images/play-shapes.jpg" alt="Children sorting colourful wooden shapes on the floor" width="800" height="500" loading="lazy" />
+            <figcaption><span class="tag tone-pink">Hands-on</span>Learning through play</figcaption>
+          </figure>
+          <figure class="tile tile-garden">
+            <img src="assets/images/play-garden.jpg" alt="Flowers, pots and a watering can ready for planting" width="800" height="500" loading="lazy" />
+            <figcaption><span class="tag tone-sun">Mud kitchen</span>Muddy pies &amp; leafy potions</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meals & care -->
+    <section class="section section-cream" id="care">
+      <div class="container care-grid">
+        <div class="care-visual">
+          <div class="care-photo blob blob-alt">
+            <img src="assets/images/care-keyperson.jpg" alt="A nursery practitioner sharing a moment with a young boy" width="1200" height="797" loading="lazy" />
+          </div>
+          <svg class="care-hand" aria-hidden="true"><use href="#hand" /></svg>
+        </div>
+
+        <div class="care-copy">
+          <p class="eyebrow">Food &amp; care</p>
+          <h2>Fresh food and gentle care, every single day</h2>
+
+          <div class="care-lists">
+            <div>
+              <h3 class="care-heading"><svg class="icon"><use href="#i-bowl" /></svg>At mealtimes</h3>
+              <ul class="ticks">
+                <li><svg class="icon"><use href="#check" /></svg>Cooked on site by our nursery cook</li>
+                <li><svg class="icon"><use href="#check" /></svg>A 4-week menu following Children’s Food Trust guidelines</li>
+                <li><svg class="icon"><use href="#check" /></svg>Every allergy and dietary need catered for</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="care-heading"><svg class="icon"><use href="#i-heart" /></svg>Day to day</h3>
+              <ul class="ticks">
+                <li><svg class="icon"><use href="#check" /></svg>A key person who really knows your child</li>
+                <li><svg class="icon"><use href="#check" /></svg>A daily catch-up at pick-up, plus Famly updates</li>
+                <li><svg class="icon"><use href="#check" /></svg>Paediatric first aid trained staff</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="care-badge">
+            <img src="assets/images/food-hygiene-5.png" alt="Food Hygiene Rating 5 — Very Good" width="320" height="184" loading="lazy" />
+            <p>Awarded the <strong>highest possible</strong> food hygiene rating by the Food Standards Agency.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parent reassurance -->
+    <section class="section" id="parents">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">What families say</p>
+          <h2>Loved by parents. Rated ‘Good’ by Ofsted.</h2>
+        </header>
+
+        <div class="trust-grid">
+          <div class="testimonials" data-carousel>
+            <svg class="testimonials-quote" aria-hidden="true"><use href="#quote" /></svg>
+            <div class="testimonial-track" data-carousel-track aria-live="polite">
+              <figure class="testimonial is-active">
+                <blockquote>“I have 2 kids at Small World Nursery and both of them love staying there… I feel safe leaving them there because I know they are happy and well!”</blockquote>
+                <figcaption>Parent · March 2026</figcaption>
+              </figure>
+              <figure class="testimonial">
+                <blockquote>“My one-year-old settled in well and enjoyed all the fun activities provided… The teachers are very much loving and caring.”</blockquote>
+                <figcaption>Parent · March 2026</figcaption>
+              </figure>
+              <figure class="testimonial">
+                <blockquote>“As working parents, our days are made much easier being able to drop our child at a setting that not only she loves to attend, but that we fully trust and know she is safe and cared for.”</blockquote>
+                <figcaption>Parent · June 2025</figcaption>
+              </figure>
+              <figure class="testimonial">
+                <blockquote>“My son has progressed well and enjoys the range of activities the nursery provides, particularly the outdoor activities like the mud kitchen and the allotment.”</blockquote>
+                <figcaption>Pre-School parent · June 2025</figcaption>
+              </figure>
+              <figure class="testimonial">
+                <blockquote>“When we first began looking for a nursery for our first-born, we looked at many in the area. We are so glad that we chose Small World.”</blockquote>
+                <figcaption>Parent · June 2025</figcaption>
+              </figure>
+            </div>
+            <div class="carousel-controls">
+              <button class="carousel-btn" type="button" data-carousel-prev aria-label="Previous review">
+                <svg class="icon flip"><use href="#arrow" /></svg>
+              </button>
+              <div class="carousel-dots" data-carousel-dots></div>
+              <button class="carousel-btn" type="button" data-carousel-next aria-label="Next review">
+                <svg class="icon"><use href="#arrow" /></svg>
+              </button>
+            </div>
+          </div>
+
+          <aside class="ofsted-card">
+            <div class="ofsted-head">
+              <img src="assets/images/ofsted-good.jpg" alt="Ofsted Good Provider" width="240" height="240" loading="lazy" />
+              <p>What Ofsted said at our latest inspection</p>
+            </div>
+            <ul class="ofsted-quotes">
+              <li>“Children feel safe in this warm environment. They form exceptionally close relationships with their nurturing key staff.”</li>
+              <li>“Staff are wonderful role models.”</li>
+              <li>“Children display impeccable manners.”</li>
+            </ul>
+            <a class="text-link text-link-light" href="https://files.ofsted.gov.uk/v1/file/50187629" target="_blank" rel="noopener">Read the full Ofsted report <svg class="icon"><use href="#arrow" /></svg></a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Funding -->
+    <section class="funding" id="funding">
+      <div class="container">
+        <div class="funding-panel">
+          <svg class="funding-hand funding-hand-a" aria-hidden="true"><use href="#hand" /></svg>
+          <svg class="funding-hand funding-hand-b" aria-hidden="true"><use href="#hand" /></svg>
+
+          <div class="funding-head">
+            <p class="eyebrow">Fees &amp; funding</p>
+            <h2>Funded childcare places available</h2>
+            <p>We welcome government-funded hours for 9-month-olds, 2, 3 and 4 year olds. Here’s the headline — we’re always happy to talk it through.</p>
+          </div>
+
+          <ul class="funding-cards">
+            <li class="funding-card">
+              <span class="funding-age">From 9 months</span>
+              <p class="funding-hours">Up to <strong>30 hours</strong></p>
+              <p>For eligible working families.</p>
+            </li>
+            <li class="funding-card">
+              <span class="funding-age">2 year olds</span>
+              <p class="funding-hours"><strong>15 or 30</strong> hours</p>
+              <p>For eligible families. No deposit or registration fee for funded-only places.</p>
+            </li>
+            <li class="funding-card">
+              <span class="funding-age">3 &amp; 4 year olds</span>
+              <p class="funding-hours"><strong>15 or 30</strong> hours</p>
+              <p>15 hours for all children, 30 for eligible working families.</p>
+            </li>
+          </ul>
+
+          <div class="btn-row funding-actions">
+            <a class="btn btn-navy" href="#funding">See our fees &amp; funding <svg class="icon"><use href="#arrow" /></svg></a>
+            <a class="btn btn-ghost" href="https://www.gov.uk/check-eligible-free-childcare-if-youre-working" target="_blank" rel="noopener">Check eligibility on GOV.UK</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="visit" id="visit">
+      <svg class="wave wave-top wave-blue" aria-hidden="true"><use href="#wave" /></svg>
+      <svg class="visit-hand visit-hand-a" aria-hidden="true"><use href="#hand" /></svg>
+      <svg class="visit-hand visit-hand-b" aria-hidden="true"><use href="#hand" /></svg>
+
+      <div class="container visit-grid">
+        <div class="visit-copy">
+          <p class="eyebrow eyebrow-light">Arrange a visit</p>
+          <h2>Come and see Small World for yourself</h2>
+          <p class="visit-lead">The best way to get a feel for us is to pop in. A member of our management team will show you round the rooms and gardens and answer all your questions.</p>
+
+          <ol class="steps">
+            <li class="step"><span class="step-num">1</span><div><strong>Get in touch</strong><span>Send us a message or give us a call.</span></div></li>
+            <li class="step"><span class="step-num">2</span><div><strong>Take a tour</strong><span>Meet the team and see the rooms and gardens.</span></div></li>
+            <li class="step"><span class="step-num">3</span><div><strong>Settle in gently</strong><span>Free settling-in sessions with your child’s key person.</span></div></li>
+          </ol>
+
+          <ul class="visit-info">
+            <li>
+              <svg class="icon"><use href="#i-pin" /></svg>
+              <div>
+                <strong>22 Tolpits Lane, Watford WD18 6AA</strong>
+                <span>Entrance via Croxley View · <a href="https://www.google.com/maps/search/?api=1&amp;query=Small+World+Nursery+22+Tolpits+Lane+Watford+WD18+6AA" target="_blank" rel="noopener">Get directions</a></span>
+              </div>
+            </li>
+            <li>
+              <svg class="icon"><use href="#i-clock" /></svg>
+              <div>
+                <strong>Monday – Friday, 7:30am – 6pm</strong>
+                <span>Open 51 weeks of the year</span>
+              </div>
+            </li>
+            <li>
+              <svg class="icon"><use href="#i-call" /></svg>
+              <div>
+                <strong><a href="tel:01923230300">01923 230300</a></strong>
+                <span><a href="mailto:smallworldnursery1@hotmail.co.uk">smallworldnursery1@hotmail.co.uk</a></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="enquiry" data-enquiry novalidate>
+          <h3>Book your nursery tour</h3>
+          <p class="enquiry-intro">Tell us a little about your family and we’ll be in touch to find a time.</p>
+
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-phone">Phone</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" required />
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" />
+            </div>
+          </div>
+
+          <fieldset class="field">
+            <legend>Your child’s age</legend>
+            <div class="age-options">
+              <label class="age-option room-baby"><input type="radio" name="age" value="baby" /><span>Under 15 months</span></label>
+              <label class="age-option room-toddler"><input type="radio" name="age" value="toddler" /><span>15 months – 2</span></label>
+              <label class="age-option room-twos"><input type="radio" name="age" value="twos" /><span>2 – 3 years</span></label>
+              <label class="age-option room-preschool"><input type="radio" name="age" value="preschool" /><span>3 – 5 years</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="f-message">Anything we should know? <span class="optional">(optional)</span></label>
+            <textarea id="f-message" name="message" rows="3"></textarea>
+          </div>
+
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Request a tour <svg class="icon"><use href="#arrow" /></svg></button>
+          <p class="enquiry-status" data-enquiry-status role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Small World Nursery" width="560" height="288" loading="lazy" />
+        <p>Where education, care &amp; play go hand in hand. Taking children from 3 months to 5 years.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Explore">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#why">Our Nursery</a></li>
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#play">Learning &amp; Play</a></li>
+          <li><a href="#care">Our Kitchen</a></li>
+          <li><a href="#funding">Fees &amp; Funding</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Parents">
+        <h3>Parents</h3>
+        <ul>
+          <li><a href="#visit">Admission Procedure</a></li>
+          <li><a href="#parents">Ofsted</a></li>
+          <li><a href="#care">Famly App</a></li>
+          <li><a href="#parents">SENCO &amp; Local Offer</a></li>
+          <li><a href="#parents">Operation Encompass</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3>Visit us</h3>
+        <address>
+          22 Tolpits Lane<br />
+          Watford, Hertfordshire<br />
+          WD18 6AA
+        </address>
+        <p><a href="tel:01923230300">01923 230300</a></p>
+        <p>Mon–Fri · 7:30am – 6pm</p>
+      </div>
+    </div>
+
+    <div class="container footer-base">
+      <p>© 2026 Small World Nursery. All rights reserved.</p>
+      <ul>
+        <li><a href="#top">Policies &amp; Procedures</a></li>
+        <li><a href="#top">Privacy Policy</a></li>
+        <li><a href="#top">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <p class="concept-label">
+    <span class="concept-long">Website redesign concept by AQ Digital · not the official Small World Nursery website</span>
+    <span class="concept-short">Concept by AQ Digital · not the official site</span>
+  </p>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
